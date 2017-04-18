@@ -7,7 +7,7 @@ describe Account do
 
   context 'when instantiated' do
     it 'balance is zero' do
-      expect(account.balance).to eql 0
+      expect(account.balance).to eql(0)
     end
   end
 
