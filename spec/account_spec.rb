@@ -9,6 +9,10 @@ describe Account do
     it 'balance is zero' do
       expect(account.balance).to equal(0)
     end
+
+    it 'holds a transaction log' do
+      expect(account.transaction_log).to be_an_instance_of(Transaction_log)
+    end
   end
 
   context 'client makes a deposit' do
