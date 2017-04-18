@@ -1,4 +1,4 @@
-# Bank Tech Test
+# Bank Tech Test [![Coverage Status](://coveralls.io/repos/github/ayanit1/bank_tech_test/badge.svg?branch=master)](://coveralls.io/github/ayanit1/bank_tech_test?branch=master) [![Build Status](https://travis-ci.org/ayanit1/bank_tech_test.svg?branch=master)](https://travis-ci.org/ayanit1/bank_tech_test)
 
 This project is a practice technical test to build a simple banking program, as per the specification below.
 
