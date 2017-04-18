@@ -25,3 +25,26 @@ date       || credit || debit   || balance
 13/01/2012 || 2000.00||         || 3000.00
 10/01/2012 || 1000.00||         || 1000.00
 ```
+### Approach
+
+After reading the specification, I decided to use Ruby as I felt it would serve me the most in this situation, in terms of simplicity.
+
+My first step to define the following user stories:
+
+```
+As a client,
+so that I can use the services provided by the bank,
+I want to be able to have a bank account
+
+As a client,
+so that I am able to save money,
+I want to be able to deposit into my Account
+
+As a client,
+so that I am able to use the money I've saved,
+I want to be able to withdraw money
+
+As a client,
+so that I can monitor my cash flow,
+I want to be able view and account statement
+```
