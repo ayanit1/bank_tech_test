@@ -2,8 +2,8 @@ require 'account'
 
 describe Account do
   let(:account) { Account.new }
-  let(:deposit) { double :transaction, :amount => 5  }
-  let(:withdraw) { double :transaction, :amount => -5 }
+  let(:deposit) { double :transaction, :amount => 5.00  }
+  let(:withdraw) { double :transaction, :amount => -5.00 }
 
   context 'when instantiated' do
     it 'balance is zero' do
@@ -13,7 +13,7 @@ describe Account do
 
   context 'client makes a deposit' do
     it 'updates the balance' do
-      expect { account.add_transaction(deposit) }.to change { account.balance }.to(5)
+      expect { account.add_transaction(deposit) }.to change { account.balance }.to(5.00)
     end
   end
 
