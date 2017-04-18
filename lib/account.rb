@@ -7,4 +7,7 @@ class Account
     @balance = 0
   end
 
+  def add_transaction(transaction)
+    @balance += transaction.amount
+  end
 end

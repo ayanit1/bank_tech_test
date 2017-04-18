@@ -10,9 +10,11 @@ describe Account do
     end
   end
 
-  context 'client makes a transaction' do
+  context 'client makes a deposit' do
     it 'updates the balance' do
       expect { account.add_transaction(deposit) }.to change { account.balance }.to(5)
     end
   end
+
+  
 end
