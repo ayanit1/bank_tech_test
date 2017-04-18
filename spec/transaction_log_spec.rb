@@ -5,7 +5,7 @@ describe Transaction_log do
 
   context 'when instantiated' do
     it 'has holds an empty array as placeholder' do
-      expect(transaction_log.transactions).to equal([])
+      expect(transaction_log.transactions).to eql([])
     end
   end
 end
