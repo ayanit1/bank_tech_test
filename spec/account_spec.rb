@@ -22,6 +22,10 @@ describe Account do
       account.add_transaction(deposit)
       expect { account.add_transaction(withdraw) }.to change { account.balance }.to(0)
     end
+
+    it 'raises error message if not enough balance is available' do
+      expect { account.add_transaction(withdraw) }.to raise_error('Transaction error: Not enough balance in account to make withdraw')
+    end
   end
 
 end
