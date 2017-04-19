@@ -4,7 +4,6 @@ describe Account do
   subject(:account) { described_class.new }
   let(:deposit) { double :transaction, :amount => 5.00  }
   let(:withdraw) { double :transaction, :amount => -5.00 }
-  # let(:transaction_log) { class_double 'transaction_log', :log => [] }
 
   context 'when instantiated' do
     it 'balance is zero' do
@@ -22,7 +21,7 @@ describe Account do
         expect { account.add_transaction(deposit) }.to change { account.balance }.to(5.00)
       end
 
-      xit 'logs transaction' do
+      it 'logs transaction' do
         account.add_transaction(deposit)
         expect(transaction_log).to receive(deposit)
       end
