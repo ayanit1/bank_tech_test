@@ -4,7 +4,7 @@ describe Account do
   subject(:account) { described_class.new }
   let(:deposit) { double :transaction, :amount => 5.00  }
   let(:withdraw) { double :transaction, :amount => -5.00 }
-  let(:transaction_log) { class_double 'transaction_log', :log => [] }
+  # let(:transaction_log) { class_double 'transaction_log', :log => [] }
 
   context 'when instantiated' do
     it 'balance is zero' do
