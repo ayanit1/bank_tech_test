@@ -8,4 +8,12 @@ describe Transaction_log do
       expect(transaction_log.transactions).to eql([])
     end
   end
+
+  describe '#log' do
+    context 'client has made a transaction' do
+      it 'logs transaction' do
+        expect { transaction_log.log(transaction) }.to change{ transaction_log.transactions.size }.by(1)
+      end
+    end
+  end
 end
