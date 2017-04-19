@@ -13,12 +13,17 @@ class Account
     error_message = "Transaction error: Not enough balance in account to make withdraw"
     raise error_message if @balance + transaction.amount < MINIMUM_BALANCE
     update_balance(transaction.amount)
+    add_transaction_to_log(transaction)
   end
 
   private
 
   def update_balance(amount)
     @balance += amount
+  end
+
+  def add_transaction_to_log(transaction)
+    @transaction_log.log(transaction)
   end
 
 end

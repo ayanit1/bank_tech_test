@@ -5,4 +5,8 @@ class Transaction_log
   def initialize
     @transactions = []
   end
+
+  def log(transaction)
+    @transactions.push(transaction)
+  end
 end

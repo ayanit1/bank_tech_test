@@ -1,12 +1,13 @@
 require 'transaction'
 
 describe Transaction do
-  subject(:transaction) { described_class.new }
-  let(:deposit) { Transaction.new(5.00) }
+  let(:deposit) { 5.00 }
+  subject(:transaction) { described_class.new(deposit) }
+
 
   context 'when instantiated' do
     it 'accepts a deposit amount' do
-      expect(deposit.amount).to equal(5.00)
+      expect(transaction.amount).to equal(5.00)
     end
   end
 
