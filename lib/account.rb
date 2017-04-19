@@ -2,10 +2,11 @@ class Account
   INITIAL_BALANCE = 0
   MINIMUM_BALANCE = 0
 
-  attr_reader :balance
+  attr_reader :balance, :transaction_log
 
-  def initialize
+  def initialize(transaction_log = Transaction_log.new)
     @balance = 0
+    @transaction_log = transaction
   end
 
   def add_transaction(transaction)
@@ -19,5 +20,5 @@ class Account
   def update_balance(amount)
     @balance += amount
   end
-  
+
 end
