@@ -6,7 +6,7 @@ class Account
 
   def initialize(transaction_log = Transaction_log.new)
     @balance = 0
-    @transaction_log = transaction
+    @transaction_log = transaction_log
   end
 
   def add_transaction(transaction)
