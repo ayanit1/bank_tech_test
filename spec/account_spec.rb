@@ -20,11 +20,6 @@ describe Account do
       it 'updates the balance' do
         expect { account.add_transaction(deposit) }.to change { account.balance }.to(5.00)
       end
-
-      it 'logs transaction' do
-        account.add_transaction(deposit)
-        expect(transaction_log).to receive(deposit)
-      end
     end
 
     context 'client makes a withdraw' do
