@@ -1,7 +1,7 @@
 require 'transaction_log'
 
 describe Transaction_log do
-  let(:transaction_log) { Transaction_log.new }
+  subject(:transaction_log) { described_class.new }
   let(:transaction) { double :transaction, :amount => 5.00 }
 
   context 'when instantiated' do
