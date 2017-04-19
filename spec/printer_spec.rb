@@ -8,10 +8,7 @@ describe Printer do
   let(:account) { double :account, :transaction_log => transaction_log }
   subject(:printer) { described_class.new }
   let(:output) {
-    'date || credit || debit || balance
-     14/01/2012 || || 500.00 || 2500.00
-     13/01/2012 || 2000.00 || || 3000.00
-     10/01/2012 || 1000.00 || || 1000.00'
+    "date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00\n13/01/2012 || 2000.00 || || 3000.00\n10/01/2012 || 1000.00 || || 1000.00\n"
   }
 
   describe '#print_bank_statement' do
