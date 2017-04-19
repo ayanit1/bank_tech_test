@@ -2,6 +2,7 @@ require 'transaction_log'
 
 describe Transaction_log do
   let(:transaction_log) { Transaction_log.new }
+  let(:transaction) { double :transaction, :amount => 5.00 }
 
   context 'when instantiated' do
     it 'has holds an empty array as placeholder' do

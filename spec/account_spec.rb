@@ -22,6 +22,9 @@ describe Account do
         expect { account.add_transaction(deposit) }.to change { account.balance }.to(5.00)
       end
 
+      # it 'adds to transaction log' do
+      #   expect { account.add_transaction(deposit) }.to change { transaction_log.transactions }.to match_array([5.00])
+      # end
     end
 
     context 'client makes a withdraw' do
